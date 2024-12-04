@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Header Section -->
+    <header class="dashboard-header">
+      <div class="header-box">
+        <h1>LAMBDA INSTITUTE OF TECHNOLOGY</h1>
+        <h2>Admin Dashboard</h2>
+      </div>
+    </header>
+
+    <!-- Layout Wrapper -->
+    <div class="layout-wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <nav>
+            <ul>
+              <li><a href="#dashboard">DASHBOARD</a></li>
+              <li><a href="#users">USERS</a></li>
+              <li><a href="#roles">ROLES</a></li>
+              <li><a href="#permissions">PERMISSIONS</a></li>
+              <li><a href="#" id="toggle-mode">TOGGLE TO DARK MODE</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <section id="dashboard" class="dashboard-section">
+          <h3>Welcome to the Admin Dashboard</h3>
+          <p>Manage users, roles, and permissions seamlessly.</p>
+        </section>
+        <section id="users" class="user-management">
+          <h3>User Management</h3>
+          <table id="user-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td contenteditable="true">John Doe</td>
+                <td contenteditable="true">john@example.com</td>
+                <td contenteditable="true">Admin</td>
+                <td contenteditable="true">Active</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                  <button class="save-btn" style="display: none;">Save</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button id="add-user">Add User</button>
+        </section>
+        <section id="roles" class="roles-management">
+          <h3>Roles</h3>
+          <table id="role-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Permissions</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td contenteditable="true">Admin</td>
+                <td contenteditable="true">Read, Write, Delete</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                  <button class="save-btn" style="display: none;">Save</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button id="add-role">Add Role</button>
+        </section>
+        <section id="permissions" class="permissions-management">
+          <h3>Permissions</h3>
+          <table id="permission-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>User Name</th>
+                <th>Permission</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td contenteditable="true">John Doe</td>
+                <td contenteditable="true">Admin Access,Adminstration Access</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                  <button class="save-btn" style="display: none;">Save</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button id="add-permission">Add Permission</button>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
